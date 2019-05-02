@@ -11,21 +11,21 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-public class LambdaTest {
+class LambdaTest {
 
     @Test
-    public void removeStringsWithMoreThanThreeCharacters() {
+    void removeStringsWithMoreThanThreeCharacters() {
         List<String> input = asList("This", "is", "java", "8");
-        //input = Lambda.filter(input, s -> s.length()<3)
-        ;
+        //input = Lambda.filter(input, s -> s.length()<3);
         assertThat(input, contains("is", "8"));
     }
 
     @Test
-    public void shouldBeExecutedWitingATransaction() {
+    void shouldBeExecutedWitingATransaction() {
         TransactionLambda lambda = new TransactionLambda();
         //Lambda.processWithinTransaction(lambda);
         assertTrue(lambda.isConsumed());
@@ -38,22 +38,22 @@ public class LambdaTest {
     }
 
     @Test
-    public void extractStringSize() {
+    void extractStringSize() {
         String myString = "This is great";
         int length = Lambda.getStringLength(myString/* get string length*/);
-        assertTrue(length == 13);
+        assertEquals(13, length);
     }
 
     @Test
-    public void multiply() {
+    void multiply() {
         int a = 5;
         int b = 6;
         int result = Lambda.multiply(a, b);
-        assertTrue(result == 30);
+        assertEquals(30, result);
     }
 
     @Test
-    public void shouldSortStrings() throws Exception {
+    void shouldSortStrings() throws Exception {
         List<String> input = Arrays.asList("C", "F", "A", "D", "B", "E");
         List<String> result = Lambda.sortStrings(input);
         assertThat(result, is(equalTo(Arrays.asList("A", "B", "C", "D", "E", "F"))));
