@@ -19,10 +19,10 @@ class Streams {
         return result;
     }
 
-    public String findShortestString(List<String> input) {
+    String findShortestString(List<String> input) {
         var shortestString = input.stream().min(Comparator.comparingInt(String::length));
 
-        return shortestString.get();
+        return shortestString.orElse("");
     }
 
 
@@ -36,4 +36,9 @@ class Streams {
     }
 
 
+    public String createAFullSentenceFromTheList(List<String> input) {
+        var fullSentence = input.stream().reduce((s1, s2) -> s1 + " " + s2);
+
+        return fullSentence.orElse("");
+    }
 }

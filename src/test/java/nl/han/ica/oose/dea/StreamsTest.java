@@ -56,4 +56,15 @@ class StreamsTest {
         Assertions.assertEquals("8", foundString);
     }
 
+    @Test
+    void testCreateAFullSentenceFromTheList() {
+        // Setup
+        List<String> input = asList("Welcome", "to", "Java", "8", "Streams");
+
+        // Test
+        String foundString = streams.createAFullSentenceFromTheList(input);
+
+        // Verify
+        Assertions.assertEquals("Welcome to Java 8 Streams", foundString);
+    }
 }
