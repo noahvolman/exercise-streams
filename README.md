@@ -13,9 +13,9 @@ Deze oefeningen bestaan uit het laten slagen van Unittests.
  * testRemoveStringsWithMoreThanThreeCharacters
  * testRemoveNonNumeralStrings
 
-
 ### Het identificeren van een element uit een lijst
  * testFindShortestString
 
 ### Het samenvoegen van de elementen uit een lijst
  * testCreateAFullSentenceFromTheList
+ * testCalculateCompleteCostOfAllProducts

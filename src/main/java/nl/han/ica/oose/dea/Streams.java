@@ -36,9 +36,33 @@ class Streams {
     }
 
 
-    public String createAFullSentenceFromTheList(List<String> input) {
+    String createAFullSentenceFromTheList(List<String> input) {
         var fullSentence = input.stream().reduce((s1, s2) -> s1 + " " + s2);
 
         return fullSentence.orElse("");
+    }
+
+    int calculateCompleteCostOfAllProducts(List<Product> products) {
+        var totalCost = products.stream().mapToInt(Product::getPrice).reduce(0, (p1, p2) -> p1 + p2);
+        return totalCost;
+    }
+
+
+    public static class Product {
+        private String name;
+        private int price;
+
+        public Product(String name, int price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public int getPrice() {
+            return price;
+        }
     }
 }
