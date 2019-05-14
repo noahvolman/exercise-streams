@@ -1,5 +1,6 @@
 package nl.han.ica.oose.dea;
 
+import nl.han.ica.oose.dea.helpers.Product;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,7 +11,6 @@ import static java.util.Arrays.asList;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
-
 
 class StreamsTest {
     private Streams streams;
@@ -69,22 +69,22 @@ class StreamsTest {
     }
 
     @Test
-    void testCalculateCompleteCostOfAllProducts() {
+    void testCalculateTotalCostOfAllProducts() {
         // Setup
         final int PRICE_TV = 1200;
         final int PRICE_LAPTOP = 2300;
         final int PRICE_TABLET = 149;
         final int PRICE_PHONE = 237;
 
-        var tv = new Streams.Product("TV", PRICE_TV);
-        var laptop = new Streams.Product("Laptop", PRICE_LAPTOP);
-        var tablet = new Streams.Product("tablet", PRICE_TABLET);
-        var phone = new Streams.Product("phone", PRICE_PHONE);
+        var tv = new Product("TV", PRICE_TV);
+        var laptop = new Product("Laptop", PRICE_LAPTOP);
+        var tablet = new Product("tablet", PRICE_TABLET);
+        var phone = new Product("phone", PRICE_PHONE);
 
-        List<Streams.Product> input = asList(tv, laptop, tablet, phone);
+        List<Product> input = asList(tv, laptop, tablet, phone);
 
         // Test
-        int totalValue = streams.calculateCompleteCostOfAllProducts(input);
+        int totalValue = streams.calculateTotalCostOfAllProducts(input);
 
         // Verify
         Assertions.assertEquals(PRICE_TV + PRICE_LAPTOP + PRICE_TABLET + PRICE_PHONE, totalValue);

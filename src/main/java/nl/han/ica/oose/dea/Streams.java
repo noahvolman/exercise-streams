@@ -1,6 +1,8 @@
 package nl.han.ica.oose.dea;
 
 
+import nl.han.ica.oose.dea.helpers.Product;
+
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -42,27 +44,8 @@ class Streams {
         return fullSentence.orElse("");
     }
 
-    int calculateCompleteCostOfAllProducts(List<Product> products) {
+    int calculateTotalCostOfAllProducts(List<Product> products) {
         var totalCost = products.stream().mapToInt(Product::getPrice).reduce(0, (p1, p2) -> p1 + p2);
         return totalCost;
-    }
-
-
-    public static class Product {
-        private String name;
-        private int price;
-
-        public Product(String name, int price) {
-            this.name = name;
-            this.price = price;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getPrice() {
-            return price;
-        }
     }
 }

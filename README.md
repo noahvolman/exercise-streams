@@ -5,7 +5,7 @@ Onderwerp is het bekend raken met de Stream API.
 
 # Oefening
 
-Deze oefeningen bestaan uit het laten slagen van Unittests. 
+Deze oefeningen bestaan uit het laten slagen van Unittests.
 
 ## Streams
 
@@ -18,4 +18,4 @@ Deze oefeningen bestaan uit het laten slagen van Unittests.
 
 ### Het samenvoegen van de elementen uit een lijst
  * testCreateAFullSentenceFromTheList
- * testCalculateCompleteCostOfAllProducts
+ * testCalculateTotalCostOfAllProducts
