@@ -58,7 +58,7 @@ class StreamsTest {
     }
 
     @Test
-    void test3BFindShortestString() {
+    void test3BFindShortestStringOfEmptyList() {
         // Setup
         List<String> input = asList(new String[]{});
 
@@ -82,7 +82,7 @@ class StreamsTest {
     }
 
     @Test
-    void test5ACalculateTotalCostOfAllProducts() {
+    void test5CalculateTotalCostOfAllProducts() {
         // Setup
         var input = initialiseTestProductSet();
 
