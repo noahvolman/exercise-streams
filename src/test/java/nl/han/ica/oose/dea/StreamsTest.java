@@ -66,7 +66,7 @@ class StreamsTest {
         String foundString = sut.findShortestString(input);
 
         // Verify
-        Assertions.assertEquals("", foundString);
+        Assertions.assertEquals(null, foundString);
     }
 
     @Test

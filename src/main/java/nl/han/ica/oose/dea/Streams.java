@@ -23,7 +23,7 @@ class Streams {
     }
 
     String findShortestString(List<String> input) {
-        return input.stream().sorted().findFirst().orElse("");
+        return input.stream().sorted().findFirst().orElse(null);
     }
 
     String createAFullSentenceFromTheList(List<String> input) {
