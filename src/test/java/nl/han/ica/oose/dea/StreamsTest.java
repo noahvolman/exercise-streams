@@ -23,85 +23,85 @@ class StreamsTest {
 
     @Test
     void test1RemoveStringsWithMoreThanThreeCharacters() {
-        // Setup
+        // Arrange
         List<String> input = asList("Welcome", "to", "Java", "8", "Streams");
 
-        // Test
+        // Act
         List<String> filteredStrings = sut.filterStringsShorterThanThreeCharacters(input);
 
-        // Verify
+        // Assert
         assertThat(filteredStrings, contains("to", "8"));
     }
 
     @Test
     void test2RemoveNonNumeralStrings() {
-        // Setup
+        // Arrange
         List<String> input = asList("Welcome", "to", "Java", "8", "Streams");
 
-        // Test
+        // Act
         List<String> filteredStrings = sut.filterStringsThatContainOnlyNumerals(input);
 
-        // Verify
+        // Assert
         assertThat(filteredStrings, contains("8"));
     }
 
     @Test
     void test3AFindShortestString() {
-        // Setup
+        // Arrange
         List<String> input = asList("Welcome", "to", "Java", "8", "Streams");
 
-        // Test
+        // Act
         String foundString = sut.findShortestString(input);
 
-        // Verify
+        // Assert
         Assertions.assertEquals("8", foundString);
     }
 
     @Test
     void test3BFindShortestStringOfEmptyList() {
-        // Setup
+        // Arrange
         List<String> input = asList(new String[]{});
 
-        // Test
+        // Act
         String foundString = sut.findShortestString(input);
 
-        // Verify
+        // Assert
         Assertions.assertEquals(null, foundString);
     }
 
     @Test
     void test4CreateAFullSentenceFromTheList() {
-        // Setup
+        // Arrange
         List<String> input = asList("Welcome", "to", "Java", "8", "Streams");
 
-        // Test
+        // Act
         String foundString = sut.createAFullSentenceFromTheList(input);
 
-        // Verify
+        // Assert
         Assertions.assertEquals("Welcome to Java 8 Streams", foundString);
     }
 
     @Test
     void test5CalculateTotalCostOfAllProducts() {
-        // Setup
+        // Arrange
         var input = initialiseTestProductSet();
 
-        // Test
+        // Act
         int totalValue = sut.calculateTotalCostOfAllProducts(input);
 
-        // Verify
+        // Assert
         Assertions.assertEquals(7286, totalValue);
     }
 
     @Test
     void test6CalculateTotalCostOfAllGadgets() {
-        // Setup
+        // Arrange
         var input = initialiseTestProductSet();
 
-        // Test
+        // Act
         int totalValue = sut.calculateTotalCostOfAllGadgets(input);
 
-        // Verify
+        // Assert
         Assertions.assertEquals(3886, totalValue);
     }
 
