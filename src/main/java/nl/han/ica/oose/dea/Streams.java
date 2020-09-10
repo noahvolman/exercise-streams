@@ -13,7 +13,7 @@ class Streams {
     List<String> filterStringsShorterThanThreeCharacters(List<String> input) {
         var result = input; // implement
 
-        return result.stream().filter(string -> string.length()<3).collect(Collectors.toList());
+        return result.stream().filter(string -> string.length() < 3).collect(Collectors.toList());
     }
 
     List<String> filterStringsThatContainOnlyNumerals(List<String> input) {
@@ -32,11 +32,11 @@ class Streams {
 
     int calculateTotalCostOfAllProducts(List<Product> products) {
         return products.stream().map(product -> product.getPrice())
-                .reduce((prev, next) -> prev+next).orElse(0);
+                .reduce((prev, next) -> prev + next).orElse(0);
     }
 
     int calculateTotalCostOfAllGadgets(List<Product> products) {
-        return products.stream().filter(product -> product.getCategory()== ProductCategory.GADGETS)
+        return products.stream().filter(product -> product.getCategory().equals(ProductCategory.GADGETS))
                 .map(product -> product.getPrice())
                 .mapToInt(Integer::intValue).sum();
     }
