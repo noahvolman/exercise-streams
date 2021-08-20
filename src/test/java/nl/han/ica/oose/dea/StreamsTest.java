@@ -13,52 +13,52 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
 
-class StreamsTest {
+public class StreamsTest {
     private Streams sut;
 
     @BeforeEach
-    void setup() {
+    public void setup() {
         sut = new Streams();
     }
 
     @Test
-    void test1RemoveStringsWithMoreThanThreeCharacters() {
+    public void test1RemoveStringsWithMoreThanThreeCharacters() {
         // Arrange
-        List<String> input = asList("Welcome", "to", "Java", "8", "Streams");
+        List<String> input = asList("Welcome", "to", "Java", "12", "Streams");
 
         // Act
         List<String> filteredStrings = sut.filterStringsShorterThanThreeCharacters(input);
 
         // Assert
-        assertThat(filteredStrings, contains("to", "8"));
+        assertThat(filteredStrings, contains("to", "12"));
     }
 
     @Test
-    void test2RemoveNonNumeralStrings() {
+    public void test2RemoveNonNumeralStrings() {
         // Arrange
-        List<String> input = asList("Welcome", "to", "Java", "8", "Streams");
+        List<String> input = asList("Welcome", "to", "Java", "12", "Streams");
 
         // Act
         List<String> filteredStrings = sut.filterStringsThatContainOnlyNumerals(input);
 
         // Assert
-        assertThat(filteredStrings, contains("8"));
+        assertThat(filteredStrings, contains("12"));
     }
 
     @Test
-    void test3AFindShortestString() {
+    public void test3AFindShortestString() {
         // Arrange
-        List<String> input = asList("Welcome", "to", "Java", "8", "Streams");
+        List<String> input = asList("Welcome", "to", "Java", "12", "Streams");
 
         // Act
         String foundString = sut.findShortestString(input);
 
         // Verify
-        Assertions.assertEquals("8", foundString);
+        Assertions.assertEquals("to", foundString);
     }
 
     @Test
-    void test3BFindShortestStringOfEmptyList() {
+    public void test3BFindShortestStringOfEmptyList() {
         // Arrange
         List<String> input = asList(new String[]{});
 
@@ -70,19 +70,19 @@ class StreamsTest {
     }
 
     @Test
-    void test4CreateAFullSentenceFromTheList() {
+    public void test4CreateAFullSentenceFromTheList() {
         // Arrange
-        List<String> input = asList("Welcome", "to", "Java", "8", "Streams");
+        List<String> input = asList("Welcome", "to", "Java", "12", "Streams");
 
         // Act
         String foundString = sut.createAFullSentenceFromTheList(input);
 
         // Assert
-        Assertions.assertEquals("Welcome to Java 8 Streams", foundString);
+        Assertions.assertEquals("Welcome to Java 12 Streams", foundString);
     }
 
     @Test
-    void test5CalculateTotalCostOfAllProducts() {
+    public void test5CalculateTotalCostOfAllProducts() {
         // Arrange
         var input = initialiseTestProductSet();
 
@@ -94,7 +94,7 @@ class StreamsTest {
     }
 
     @Test
-    void test6CalculateTotalCostOfAllGadgets() {
+    public void test6CalculateTotalCostOfAllGadgets() {
         // Arrange
         var input = initialiseTestProductSet();
 
@@ -106,8 +106,6 @@ class StreamsTest {
     }
 
     private List<Product> initialiseTestProductSet() {
-        List<Product> input;
-
         final int PRICE_TV = 1200;
         final int PRICE_LAPTOP = 2300;
         final int PRICE_TABLET = 149;
