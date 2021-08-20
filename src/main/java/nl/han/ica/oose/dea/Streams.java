@@ -27,7 +27,7 @@ public class Streams {
                 .orElse(null);
     }
 
-    public String createAFullSentenceFromTheList(List<String> input) {
+    String createAFullSentenceFromTheList(List<String> input) {
         return String.join(" ", input);
     }
 
