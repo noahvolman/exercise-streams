@@ -17,12 +17,12 @@ public class StreamsTest {
     private Streams sut;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         sut = new Streams();
     }
 
     @Test
-    public void test1RemoveStringsWithMoreThanThreeCharacters() {
+    void test1RemoveStringsWithMoreThanThreeCharacters() {
         // Arrange
         List<String> input = asList("Welcome", "to", "Java", "12", "Streams");
 
@@ -34,7 +34,7 @@ public class StreamsTest {
     }
 
     @Test
-    public void test2RemoveNonNumeralStrings() {
+    void test2RemoveNonNumeralStrings() {
         // Arrange
         List<String> input = asList("Welcome", "to", "Java", "12", "Streams");
 
@@ -46,7 +46,7 @@ public class StreamsTest {
     }
 
     @Test
-    public void test3AFindShortestString() {
+    void test3AFindShortestString() {
         // Arrange
         List<String> input = asList("Welcome", "to", "Java", "12", "Streams");
 
@@ -58,7 +58,7 @@ public class StreamsTest {
     }
 
     @Test
-    public void test3BFindShortestStringOfEmptyList() {
+    void test3BFindShortestStringOfEmptyList() {
         // Arrange
         List<String> input = asList(new String[]{});
 
@@ -70,7 +70,7 @@ public class StreamsTest {
     }
 
     @Test
-    public void test4CreateAFullSentenceFromTheList() {
+    void test4CreateAFullSentenceFromTheList() {
         // Arrange
         List<String> input = asList("Welcome", "to", "Java", "12", "Streams");
 
@@ -82,7 +82,7 @@ public class StreamsTest {
     }
 
     @Test
-    public void test5CalculateTotalCostOfAllProducts() {
+    void test5CalculateTotalCostOfAllProducts() {
         // Arrange
         var input = initialiseTestProductSet();
 
@@ -94,7 +94,7 @@ public class StreamsTest {
     }
 
     @Test
-    public void test6CalculateTotalCostOfAllGadgets() {
+    void test6CalculateTotalCostOfAllGadgets() {
         // Arrange
         var input = initialiseTestProductSet();
 
