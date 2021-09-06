@@ -29,9 +29,7 @@ public class Streams {
 
     String createAFullSentenceFromTheList(List<String> input) {
         return input.stream()
-                .reduce("",
-                        (acc, item) -> acc.concat(item).concat(" "))
-                .trim()
+                .collect(Collectors.joining(","));
     }
 
     int calculateTotalCostOfAllProducts(List<Product> products) {
