@@ -28,7 +28,8 @@ public class Streams {
     }
 
     String createAFullSentenceFromTheList(List<String> input) {
-        return String.join(" ", input);
+        return input.stream()
+                .collect(Collectors.joining(","));
     }
 
     int calculateTotalCostOfAllProducts(List<Product> products) {
