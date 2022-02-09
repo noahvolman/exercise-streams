@@ -7,7 +7,8 @@ Onderwerp is het bekend raken met de Stream API.
 
 Deze oefeningen bestaan uit het laten slagen van Unittests.
 
-FYI: Namen van test methodes dienen altijd descriptief te zijn! Om de tests in de goede volgorde te zien in IntelliJ - zodat je ze één voor één kunt gaan laten slagen - zit in de testmethode namen een volgnummer (zo staan ze alfabetisch ook in deze volgorde staan, want daar ordent IntelliJ ze standaard op).
+FYI: Namen van test methodes dienen altijd descriptief te zijn! Om de tests in de goede volgorde te zien in IntelliJ - zodat je ze één voor één kunt gaan laten slagen - zit in de testmethode namen een volgnummer. Zo staan ze alfabetisch ook in de hier gebruikte volgorde, want IntelliJ ordent de tests standaard alfabetisch op methodenaam (een vaker gebruikt 'developers trucje'). Maar in de unit tests die jezelf in dit vak schrijft gebruik je GEEN nummers (want volgorde van unit tests moet niet uitmaken).
+> "Ideally, the order in which unit tests run should not matter, and it is best practice to avoid ordering unit tests." - [Microsoft docs](https://docs.microsoft.com/en-us/dotnet/core/testing/order-unit-tests)
 
 ## Stream tests
 
