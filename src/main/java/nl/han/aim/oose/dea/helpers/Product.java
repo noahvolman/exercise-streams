@@ -1,12 +1,14 @@
 package nl.han.aim.oose.dea.helpers;
 
+import static nl.han.aim.oose.dea.helpers.ProductCategory.GADGETS;
+
 public class Product {
     private String name;
     private int price;
     private ProductCategory category;
 
     public Product(String name, int price) {
-        this(name, price, ProductCategory.GADGETS);
+        this(name, price, GADGETS);
     }
 
     public Product(String name, int price, ProductCategory category) {
@@ -23,6 +25,8 @@ public class Product {
         return price;
     }
 
-    public ProductCategory getCategory() { return category; }
+    public ProductCategory getCategory() {
+        return category;
+    }
 
 }
