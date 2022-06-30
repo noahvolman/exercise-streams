@@ -7,21 +7,21 @@ Onderwerp is het bekend raken met de Stream API.
 
 Deze oefeningen bestaan uit het laten slagen van Unittests.
 
-FYI: Namen van test methodes dienen altijd descriptief te zijn! Om de tests in de goede volgorde te zien in IntelliJ - zodat je ze één voor één kunt gaan laten slagen - zit in de testmethode namen een volgnummer (zo staan ze alfabetisch ook in deze volgorde staan, want daar ordent IntelliJ ze standaard op).
+FYI: Namen van test methodes dienen altijd descriptief te zijn!
 
 ## Stream tests
 
 ### I. Het filteren van een lijst
- * test1RemoveStringsWithMoreThanThreeCharacters
- * test2RemoveNonNumeralStrings
+ * filterStringsShorterThanThreeCharacters_WithMoreThanThreeCharactersInElements_ShouldRemoveFromList
+ * filterStringsThatContainOnlyNumerals_WithNonNumeralStrings_ShouldRemoveNonNumeralStrings
 
 ### II. Het identificeren van een element uit een lijst
- * test3AFindShortestString
- * test3BFindShortestStringOfEmptyList
+ * findShortestString_WithListOfStrings_ReturnsShortestString
+ * findShortestString_WithEmptyList_ReturnsNull
 
 ### III. Het samenvoegen van de elementen uit een lijst
- * test4CreateAFullSentenceFromTheList
+ * createAFullSentenceFromTheList_WithListInput_CreatesSentence
  
 ### IV. Het bepalen van totalen
- * test5CalculateTotalCostOfAllProducts
- * test6CalculateTotalCostOfAllGadgets
+ * calculateTotalCostOfAllProducts_WithListOfProducts_ReturnsSumOfProductCost
+ * calculateTotalCostOfAllGadgets_WithListOfProducts_ReturnsSumOfGadgetsCost
