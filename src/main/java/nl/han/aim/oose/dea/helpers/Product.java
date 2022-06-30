@@ -1,6 +1,6 @@
-package nl.han.ica.oose.dea.helpers;
+package nl.han.aim.oose.dea.helpers;
 
-import static nl.han.ica.oose.dea.helpers.ProductCategory.GADGETS;
+import static nl.han.aim.oose.dea.helpers.ProductCategory.GADGETS;
 
 public class Product {
     private String name;

@@ -1,7 +1,7 @@
-package nl.han.ica.oose.dea;
+package nl.han.aim.oose.dea;
 
-import nl.han.ica.oose.dea.helpers.Product;
-import nl.han.ica.oose.dea.helpers.ProductCategory;
+import nl.han.aim.oose.dea.helpers.Product;
+import nl.han.aim.oose.dea.helpers.ProductCategory;
 
 import java.util.Comparator;
 import java.util.List;

@@ -1,4 +1,4 @@
-package nl.han.ica.oose.dea.helpers;
+package nl.han.aim.oose.dea.helpers;
 
 public enum ProductCategory {
     GADGETS,
