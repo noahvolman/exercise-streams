@@ -1,6 +1,4 @@
-package nl.han.ica.oose.dea.helpers;
-
-import static nl.han.ica.oose.dea.helpers.ProductCategory.GADGETS;
+package nl.han.aim.oose.dea.helpers;
 
 public class Product {
     private String name;
@@ -8,7 +6,7 @@ public class Product {
     private ProductCategory category;
 
     public Product(String name, int price) {
-        this(name, price, GADGETS);
+        this(name, price, ProductCategory.GADGETS);
     }
 
     public Product(String name, int price, ProductCategory category) {
