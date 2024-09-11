@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class StreamsFilterList {
 
     List<String> filterStringsShorterThanThreeCharacters(List<String> input) {
-        // TODO: implement
+    String <String> Stream  = stream.of();
 
         return input;
     }
