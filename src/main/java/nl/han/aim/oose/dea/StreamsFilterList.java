@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 public class StreamsFilterList {
 
     List<String> filterStringsShorterThanThreeCharacters(List<String> input) {
-        Stream <String> streamOfArray = input.stream()
+        input.stream()
                 .filter(elements -> elements.length() < 3);
 
 
